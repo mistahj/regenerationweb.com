@@ -33,20 +33,23 @@ base theme  = zen
 ; useful feature. See the excellent Drupal 7 Theme Guide at
 ; http://drupal.org/node/263967 for more details.
 
-stylesheets[all][]        = css/html-reset.css
-stylesheets[all][]        = css/wireframes.css
-stylesheets[all][]        = css/layout-fixed.css
-stylesheets[all][]        = css/page-backgrounds.css
-stylesheets[all][]        = css/tabs.css
-stylesheets[all][]        = css/pages.css
-stylesheets[all][]        = css/blocks.css
-stylesheets[all][]        = css/navigation.css
-stylesheets[all][]        = css/views-styles.css
-stylesheets[all][]        = css/nodes.css
-stylesheets[all][]        = css/comments.css
-stylesheets[all][]        = css/forms.css
-stylesheets[all][]        = css/fields.css
-stylesheets[print][]      = css/print.css
+;stylesheets[all][]        = css/html-reset.css
+;stylesheets[all][]        = css/wireframes.css
+;stylesheets[all][]        = css/layout-fixed.css
+;stylesheets[all][]        = css/page-backgrounds.css
+;stylesheets[all][]        = css/tabs.css
+;stylesheets[all][]        = css/pages.css
+;stylesheets[all][]        = css/blocks.css
+;stylesheets[all][]        = css/navigation.css
+;stylesheets[all][]        = css/views-styles.css
+;stylesheets[all][]        = css/nodes.css
+;stylesheets[all][]        = css/comments.css
+;stylesheets[all][]        = css/forms.css
+;stylesheets[all][]        = css/fields.css
+stylesheets[all][]      = css/superfish.css
+
+;stylesheets[print][]      = css/print.css
+
 
 ; Example of adding handheld stylesheets. The iPhone's preferred media type
 ; is based on the CSS3 Media queries. http://www.w3.org/TR/css3-mediaqueries/
@@ -58,15 +61,16 @@ stylesheets[print][]      = css/print.css
 
 ; To target all versions of IE with an ie.css, uncomment the following line:
 ;stylesheets-conditional[IE][all][]       = css/ie.css
-stylesheets-conditional[lte IE 7][all][]  = css/ie7.css
-stylesheets-conditional[lte IE 6][all][]  = css/ie6.css
+;stylesheets-conditional[lte IE 7][all][]  = css/ie7.css
+;stylesheets-conditional[lte IE 6][all][]  = css/ie6.css
 
 
 
 ; Optionally add some JavaScripts to your theme.
 
-;scripts[] = js/script.js
-
+;scripts[] = js/jquery.1.6.1.min.js
+scripts[] = js/hoverIntent.js
+scripts[] = js/superfish.js
 
 
 ; The regions defined in Zen's default page.tpl.php file.  The name in
@@ -100,7 +104,7 @@ regions[page_bottom]    = Page bottom
 ; entry for it below. See the Drupal 7 Theme Guide for more info:
 ; http://drupal.org/node/171205#features
 
-features[] = logo
+;features[] = logo
 features[] = name
 features[] = slogan
 features[] = node_user_picture
