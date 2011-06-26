@@ -140,3 +140,8 @@ function regenerationweb_preprocess_block(&$variables, $hook) {
   $variables['classes_array'][] = 'count-' . $variables['block_id'];
 }
 // */
+
+function regenerationweb_css_alter(&$css) {
+  // Remove menu css file.
+  //unset($css[drupal_get_path('module', 'system') . '/system.menus.css']);
+}
