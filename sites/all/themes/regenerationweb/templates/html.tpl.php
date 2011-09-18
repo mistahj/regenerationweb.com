@@ -85,5 +85,7 @@
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
+  <?php echo path_to_theme() ?>
+
 </body>
 </html>

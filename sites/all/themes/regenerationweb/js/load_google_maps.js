@@ -5,6 +5,12 @@
     script.type = "text/javascript";
     script.src = "http://maps.googleapis.com/maps/api/js?sensor=false&callback=regenGMapInit";
     document.body.appendChild(script);
+
+    // Image carousel widget on front page.
+    $('.flex-slider').flexslider({
+          animation: "slide",
+          controlsContainer: ".flex-container"
+    });
   })
 })(jQuery);
 
