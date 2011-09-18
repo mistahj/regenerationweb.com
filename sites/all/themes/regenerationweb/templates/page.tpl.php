@@ -6,7 +6,7 @@
  * Available variables:
  *
  * General utility variables:
- * - $base_path: The base URL path of the Drupal installation. At the very
+ * - $base_pathpath: The base URL path of the Drupal installation. At the very
  *   least, this will always default to /.
  * - $directory: The directory the template is located in, e.g. modules/system
  *   or themes/garland.
@@ -69,10 +69,11 @@
  */
 ?>
 
-<div id="page-wrapper"><div id="page">
+<div id="page-wrapper" class="container_24">
+  <div id="edge-colors" class="clearfix"></div>
+  <div id="page">
 
   <div id="header">
-    <div id="edge-colors" class="clearfix"></div>
     <div class="section clearfix">
 
     <?php if ($logo): ?>
@@ -82,15 +83,9 @@
     <?php if ($site_name || $site_slogan): ?>
       <div id="name-and-slogan">
         <?php if ($site_name): ?>
-          <?php if ($title): ?>
-            <div id="site-name"><strong>
-              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-            </strong></div>
-          <?php else: /* Use h1 when the content title is empty */ ?>
-            <h1 id="site-name">
-              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-            </h1>
-          <?php endif; ?>
+        <h1 id="site-name">
+          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
+        </h1>
         <?php endif; ?>
 
         <?php if ($site_slogan): ?>
@@ -99,75 +94,60 @@
       </div><!-- /#name-and-slogan -->
     <?php endif; ?>
 
-    <?php print theme('links__system_secondary_menu', array(
-      'links' => $secondary_menu,
-      'attributes' => array(
-        'id' => 'secondary-menu',
-        'class' => array('links', 'inline', 'clearfix'),
-      ),
-      'heading' => array(
-        'text' => $secondary_menu_heading,
-        'level' => 'h2',
-        'class' => array('element-invisible'),
-      ),
-    )); ?>
-
     <?php print render($page['header']); ?>
 
   </div></div><!-- /.section, /#header -->
 
-  <div id="main-wrapper"><div id="main" class="clearfix<?php if ($main_menu || $page['navigation']) { print ' with-navigation'; } ?>">
+  <div id="main-wrapper" class="grid_24"><div id="main" class="clearfix<?php if ($main_menu || $page['navigation']) { print ' with-navigation'; } ?>">
 
-    <div id="content" class="column"><div class="section">
-      <?php print render($page['highlighted']); ?>
-      <?php print $breadcrumb; ?>
-      <a id="main-content"></a>
-      <?php print render($title_prefix); ?>
-      <?php if ($title && !$is_front): ?>
-        <h1 class="title" id="page-title"><?php print $title; ?></h1>
-      <?php endif; ?>
-      <?php print render($title_suffix); ?>
-      <?php print $messages; ?>
-      <?php if ($tabs = render($tabs)): ?>
-        <div class="tabs"><?php print $tabs; ?></div>
-      <?php endif; ?>
-      <?php print render($page['help']); ?>
-      <?php if ($action_links): ?>
-        <ul class="action-links"><?php print render($action_links); ?></ul>
-      <?php endif; ?>
-      <?php print render($page['content']); ?>
-      <?php print $feed_icons; ?>
-    </div></div><!-- /.section, /#content -->
+    <? $has_sidebar = !empty($page['sidebar_first']); ?>
+
+    <div id="content" class="column<?= $has_sidebar ? " grid_16 alpha" : "" ?>">
+      <div class="section">
+        <?php print render($page['highlighted']); ?>
+        <?php print $breadcrumb; ?>
+        <a id="main-content"></a>
+        <?php print render($title_prefix); ?>
+        <?php if ($title): ?>
+          <h1 class="title" id="page-title"><?php print $title; ?></h1>
+        <?php endif; ?>
+        <?php print render($title_suffix); ?>
+        <?php print $messages; ?>
+        <?php if ($tabs = render($tabs)): ?>
+          <div class="tabs"><?php print $tabs; ?></div>
+        <?php endif; ?>
+        <?php print render($page['help']); ?>
+        <?php if ($action_links): ?>
+          <ul class="action-links"><?php print render($action_links); ?></ul>
+        <?php endif; ?>
+        <?php print render($page['content']); ?>
+        <?php print $feed_icons; ?>
+      </div>
+    </div><!-- /.section, /#content -->
+    
+    <? if ($has_sidebar): ?>
+    <div class="section grid_7 prefix_1 omega">
+      <?php print render($page['sidebar_first']); ?>
+    </div>
+    <? endif; ?>
+    
 
     <?php if ($page['navigation'] || $main_menu): ?>
-      <div id="navigation"><div class="section clearfix">
-
-        <?php print theme('links__system_main_menu', array(
-          'links' => $main_menu,
-          'attributes' => array(
-            'id' => 'main-menu',
-            'class' => array('links', 'inline', 'clearfix'),
-          ),
-          'heading' => array(
-            'text' => t('Main menu'),
-            'level' => 'h2',
-            'class' => array('element-invisible'),
-          ),
-        )); ?>
-
+      <div id="navigation" class="grid_24"><div class="section clearfix">
         <?php print render($page['navigation']); ?>
-
       </div></div><!-- /.section, /#navigation -->
     <?php endif; ?>
-
-    <?php print render($page['sidebar_first']); ?>
 
     <?php print render($page['sidebar_second']); ?>
 
   </div></div><!-- /#main, /#main-wrapper -->
 
-  <?php print render($page['footer']); ?>
-
 </div></div><!-- /#page, /#page-wrapper -->
+
+<div id="footer_wrapper" class="container_24">
+  <div id="footer" class="grid_24">
+    <?php print render($page['footer']); ?>
+  </div>
+</div>
 
 <?php print render($page['bottom']); ?>
