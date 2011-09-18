@@ -215,6 +215,14 @@ ul.links li {
 }
 
 /*
+ * Google Maps widget
+ */
+#regen-gmaps {
+  height: 250px;
+}
+
+
+/*
  * Second sidebar (on right in LTR languages, on left in RTL)
  *
  * Remember to NOT add padding or margin to your .region-sidebar-second

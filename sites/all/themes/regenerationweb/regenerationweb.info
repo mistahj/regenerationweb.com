@@ -72,6 +72,7 @@ stylesheets[all][]         = css/external/960/960_24_col.css
 scripts[] = js/jquery.1.6.1.min.js
 scripts[] = js/hoverIntent.js
 scripts[] = js/superfish.js
+scripts[] = js/load_google_maps.js
 
 
 ; The regions defined in Zen's default page.tpl.php file.  The name in
