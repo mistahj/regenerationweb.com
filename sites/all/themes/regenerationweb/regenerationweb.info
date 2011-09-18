@@ -69,7 +69,7 @@ stylesheets[all][]         = css/external/960/960_24_col.css
 
 ; Optionally add some JavaScripts to your theme.
 
-scripts[] = js/jquery.1.6.1.min.js
+;scripts[] = js/jquery.1.6.1.min.js
 scripts[] = js/hoverIntent.js
 scripts[] = js/superfish.js
 scripts[] = js/load_google_maps.js

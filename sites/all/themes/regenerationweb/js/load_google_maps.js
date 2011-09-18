@@ -1,10 +1,12 @@
-$(window).ready(function() {
-  // Lazy-load google maps script:
-  var script = document.createElement("script");
-  script.type = "text/javascript";
-  script.src = "http://maps.googleapis.com/maps/api/js?sensor=false&callback=regenGMapInit";
-  document.body.appendChild(script);
-})
+(function($) {
+  $(window).ready(function() {
+    // Lazy-load google maps script:
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "http://maps.googleapis.com/maps/api/js?sensor=false&callback=regenGMapInit";
+    document.body.appendChild(script);
+  })
+})(jQuery);
 
 // The callback on script load will load this fn, which renders the Google Map
 // into the div.
