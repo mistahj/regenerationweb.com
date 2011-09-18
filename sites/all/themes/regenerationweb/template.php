@@ -67,15 +67,15 @@
  * @param $hook
  *   The name of the template being rendered ("html" in this case.)
  */
-/* -- Delete this line if you want to use this function
 function regenerationweb_preprocess_html(&$variables, $hook) {
-  $variables['sample_variable'] = t('Lorem ipsum.');
+  
+  drupal_add_css('http://fonts.googleapis.com/css?family=Cantarell:700', array('type' => 'external'));
+  //$variables['sample_variable'] = t('Lorem ipsum.');
 
   // The body tag's classes are controlled by the $classes_array variable. To
   // remove a class from $classes_array, use array_diff().
   //$variables['classes_array'] = array_diff($variables['classes_array'], array('class-to-remove'));
 }
-// */
 
 /**
  * Override or insert variables into the page templates.
@@ -141,7 +141,10 @@ function regenerationweb_preprocess_block(&$variables, $hook) {
 }
 // */
 
+/**
+ * Remove system-wide CSS files.
+ */
 function regenerationweb_css_alter(&$css) {
   // Remove menu css file.
-  //unset($css[drupal_get_path('module', 'system') . '/system.menus.css']);
+  unset($css[drupal_get_path('module', 'system') . '/system.menus.css']);
 }

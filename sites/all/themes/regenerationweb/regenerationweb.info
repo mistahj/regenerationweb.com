@@ -33,20 +33,21 @@ base theme  = zen
 ; useful feature. See the excellent Drupal 7 Theme Guide at
 ; http://drupal.org/node/263967 for more details.
 
-;stylesheets[all][]        = css/html-reset.css
+stylesheets[all][]        = css/html-reset.css
 ;stylesheets[all][]        = css/wireframes.css
 ;stylesheets[all][]        = css/layout-fixed.css
-;stylesheets[all][]        = css/page-backgrounds.css
+stylesheets[all][]        = css/page-backgrounds.css
 ;stylesheets[all][]        = css/tabs.css
-;stylesheets[all][]        = css/pages.css
+stylesheets[all][]        = css/pages.css
 ;stylesheets[all][]        = css/blocks.css
-;stylesheets[all][]        = css/navigation.css
-;stylesheets[all][]        = css/views-styles.css
-;stylesheets[all][]        = css/nodes.css
+stylesheets[all][]        = css/navigation.css
+stylesheets[all][]        = css/views-styles.css
+stylesheets[all][]        = css/nodes.css
 ;stylesheets[all][]        = css/comments.css
-;stylesheets[all][]        = css/forms.css
-;stylesheets[all][]        = css/fields.css
-stylesheets[all][]      = css/superfish.css
+stylesheets[all][]        = css/forms.css
+stylesheets[all][]        = css/fields.css
+stylesheets[all][]         = css/superfish.css
+stylesheets[all][]         = css/external/960/960_24_col.css
 
 ;stylesheets[print][]      = css/print.css
 
@@ -68,7 +69,7 @@ stylesheets[all][]      = css/superfish.css
 
 ; Optionally add some JavaScripts to your theme.
 
-;scripts[] = js/jquery.1.6.1.min.js
+scripts[] = js/jquery.1.6.1.min.js
 scripts[] = js/hoverIntent.js
 scripts[] = js/superfish.js
 

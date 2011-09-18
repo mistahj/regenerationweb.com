@@ -36,12 +36,16 @@ body {
    */
 
   /* Use a 12px base font size with a 18px line height */
-  font-size: 0.75em; /* 16px x .75 = 12px */
-  line-height: 1.5em; /* 12px x 1.5 = 18px */
+/*  font-size: 0.75em; /* 16px x .75 = 12px */
+/*  line-height: 1.5em; /* 12px x 1.5 = 18px */
 
   /* Use a 14px base font size with a 21px line height */
-  font-size: 0.875em; /* 16px x .875 = 14px */
-  line-height: 1.5em; /* 14px x 1.5 = 21px */
+  /*font-size: 0.875em; /* 16px x .875 = 14px */
+  /*line-height: 1.5em; /* 14px x 1.5 = 21px */
+
+  /* Use a 16px base font size with a 21px line height */
+  font-size: 1.00em; /* 16px x 1 = 16px */
+  line-height: 1.714em; /* 14px x 1.5 = 24px */
 }
 
 /*
@@ -109,8 +113,7 @@ fieldset {
   font-family: "Courier New", "DejaVu Sans Mono", monospace;
 
    */
-
-  font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
+  font-family: "Helvetica", "Arial", "Nimbus Sans L", sans-serif;
 }
 
 pre,
@@ -142,6 +145,8 @@ h1 {
   font-size: 2em;
   line-height: 1.5em;
   margin: 0.75em 0;
+  font-family: 'Cantarell', 'Futura', sans-serif;
+  text-transform: uppercase;
   /* 0.75em is equivalent to 1.5em in the page's base font. font. Remember, a
      margin specified in ems is relative to the element's font-size, not to the
      pages' base font size. So, for example, if we want a 1.5em margin (relative
