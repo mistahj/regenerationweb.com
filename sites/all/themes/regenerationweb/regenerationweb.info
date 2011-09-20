@@ -74,7 +74,7 @@ stylesheets[all][]         = css/external/flexslider/flexslider.css
 scripts[] = js/hoverIntent.js
 scripts[] = js/superfish.js
 scripts[] = js/external/flexslider/jquery.flexslider-min.js
-scripts[] = js/load_google_maps.js
+scripts[] = js/regenerationweb.js
 
 
 ; The regions defined in Zen's default page.tpl.php file.  The name in

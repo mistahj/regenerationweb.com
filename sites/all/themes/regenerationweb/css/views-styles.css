@@ -4,3 +4,26 @@
  */
 
 
+/**
+ * Frontpage carousel styling
+ */
+#block-views-regenannouncementcarousel-block {
+  
+}
+
+#block-views-regenannouncementcarousel-block h2.block-title {
+  display: none;
+}
+
+#block-views-regenannouncementcarousel-block .meta {
+  display: none;
+}
+
+#block-views-regenannouncementcarousel-block .views-label {
+  display: none;
+}
+
+#block-views-regenannouncementcarousel-block .RegenEvent.carousel-body {
+  display: none;
+}
+

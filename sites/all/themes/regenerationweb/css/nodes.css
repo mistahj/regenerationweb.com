@@ -16,7 +16,7 @@
 .node-promoted /* A node that has been promoted to the front page */ {
 }
 
-.node-sticky /* A sticky node (displayed before others in a list) */ {
+  .node-sticky /* A sticky node (displayed before others in a list) */ {
 }
 
 .node-unpublished /* Unpublished nodes */ {
