@@ -24,7 +24,11 @@ body {
 
 #edge-colors {
   height: 8px;
-  background-color: #330029;
+}
+
+#edge-colors div {
+  height: 8px;
+  float: left;
 }
 
 /*
@@ -61,21 +65,24 @@ body {
 }
 
 #name-and-slogan /* Wrapper for website name and slogan */ {
-  width: 500px;
-  margin: 5em auto;
-  text-align: center;
+  width: 100%;
+  margin: 2em 0 5em 0;
 }
 
 h1#site-name,
 div#site-name /* The name of the website */ {
   margin: 0;
-  font-size: 2em;
+  text-align: center;
+  font-size: 6em;
   line-height: 1.5em;
+  text-shadow: 1px 1px 2px #FFF;
+  font-family: Spinnaker, Futura, Helvetica Neue, sans-serif;
+  text-transform: uppercase;
 }
 
 #site-name a:link,
 #site-name a:visited {
-  color: #000;
+  color: #492800;
   text-decoration: none;
 }
 
@@ -85,8 +92,7 @@ div#site-name /* The name of the website */ {
 }
 
 #site-slogan /* The slogan (or tagline) of a website */ {
-  font-style: italic;
-  font-family: Palatino, Georgia, sans-serif;
+  display: none;
 }
 
 .region-header /* Wrapper for any blocks placed in the header region */ {
@@ -118,6 +124,7 @@ div#site-name /* The name of the website */ {
 .breadcrumb /* The path to the current page in the form of a list of links */ {
   padding-bottom: 0; /* Undo system.css */
 }
+
 
 h1.title, /* The title of the page */
 h2.node-title, /* Title of a piece of content when it is given in a list of content */

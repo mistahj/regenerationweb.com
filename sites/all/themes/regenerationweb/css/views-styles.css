@@ -8,7 +8,7 @@
  * Frontpage carousel styling
  */
 #block-views-regenannouncementcarousel-block {
-  
+  position: relative;
 }
 
 #block-views-regenannouncementcarousel-block h2.block-title {
@@ -26,4 +26,3 @@
 #block-views-regenannouncementcarousel-block .RegenEvent.carousel-body {
   display: none;
 }
-

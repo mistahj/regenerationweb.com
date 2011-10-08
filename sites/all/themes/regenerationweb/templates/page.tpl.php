@@ -68,9 +68,8 @@
  * @see template_process()
  */
 ?>
-
+<div id="edge-colors" class="clearfix"></div>
 <div id="page-wrapper" class="container_24">
-  <div id="edge-colors" class="clearfix"></div>
   <div id="page">
 
   <div id="header">

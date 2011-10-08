@@ -18,7 +18,7 @@
 }
 /** Overrides system.menus.css */
 ul.menu li {
-    margin:         0;
+    margin: 0 1em 0 0;
 }
 .sf-menu li:hover {
 	visibility:		inherit; /* fixes IE7 'sticky bug' */
@@ -71,34 +71,34 @@ ul.sf-menu li li li.sfHover ul {
 	margin-bottom:	1em;
 }
 .sf-menu a {
-	border-left:	1px solid #fff;
-	border-top:		1px solid #333;
-	padding: 		.75em 1em;
+/*	border-left:	1px solid #fff;
+	border-top:		1px solid #333;*/
+	border: 1px dashed #777;
+	padding: 		.75em;
 	text-decoration:none;
 }
 .sf-menu a, .sf-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
-	color:			#EEE;
+	color:			inherit;
 }
 .sf-menu li {
-	background:		#333;
+/*	background:		; */
 }
 .sf-menu li li {
-	background:		#333;
+	background:		#FFF; 
 }
 .sf-menu li li li {
-	background:		#333;
+/*	background:		#333; */
 }
 .sf-menu li:hover, .sf-menu li.sfHover,
 .sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {
-	background:		#000;
+	background:		#FFF; 
 /*    color:          #FFF; */
 	outline:		0;
 }
 
 /*** arrows **/
 .sf-menu a.sf-with-ul {
-	padding-right: 	2.25em;
-	min-width:		1px; /* trigger IE7 hasLayout so spans position accurately */
+	min-width:		1px;  /* trigger IE7 hasLayout so spans position accurately */
 }
 .sf-sub-indicator {
 	position:		absolute;
@@ -138,7 +138,7 @@ li.sfHover > a > .sf-sub-indicator {
 
 /*** shadows for all but IE6 ***/
 .sf-shadow ul {
-	background:	url('../images/shadow.png') no-repeat bottom right;
+	/*background:	url('../images/shadow.png') no-repeat bottom right;*/
 	padding: 0 8px 9px 0;
 	-moz-border-radius-bottomleft: 17px;
 	-moz-border-radius-topright: 17px;
@@ -146,5 +146,5 @@ li.sfHover > a > .sf-sub-indicator {
 	-webkit-border-bottom-left-radius: 17px;
 }
 .sf-shadow ul.sf-shadow-off {
-	background: transparent;
+	/*background: transparent;*/
 }

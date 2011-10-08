@@ -141,17 +141,23 @@ hr, table, fieldset {
 }
 
 /* Headings */
+
+h1, h2, h3 {
+  font-family: 'Spinnaker';
+}
+
 h1 {
-  font-size: 2em;
-  line-height: 1.5em;
-  margin: 0.75em 0;
-  font-family: 'Cantarell', 'Futura', sans-serif;
-  text-transform: uppercase;
+  font-size: 1.3em;  
+/*  font-family: 'Cantarell', 'Futura', sans-serif;*/
+/*  text-transform: uppercase;*/
   /* 0.75em is equivalent to 1.5em in the page's base font. font. Remember, a
      margin specified in ems is relative to the element's font-size, not to the
      pages' base font size. So, for example, if we want a 1.5em margin (relative
      to the base font), we have to divide that length by the element's
      font-size:  1.5em / 2em = 0.5em  */
+  font-size: 2em;
+  line-height: 1.5em;
+  margin: 0.75em 0;
 }
 
 h2 {
@@ -173,6 +179,9 @@ h6 {
 
 /* Other block-level elements */
 p {
+  font-family: 'Palatino', 'Garamond';
+  font-size: 1.5em;
+  color: #272F30; /* dark blue */
 }
 
 blockquote {
