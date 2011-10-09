@@ -10,7 +10,7 @@ var THEME_COLORS = ['#E0401C', '#E5B051', '#272F30', '#F7EDB7', '#9E2B20'];
 
     // Image carousel widget on front page.
     $('.flex-slider').flexslider({
-          animation: "slide",
+          animation: "fade",
           controlsContainer: ".flex-container"
     });
 

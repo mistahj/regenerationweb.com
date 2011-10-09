@@ -36,28 +36,8 @@ li a.active {
 
 /*
  * Styling main menus.
- * This one, in particular, is for the superfish dropdown.
+ * For superfish dropdown style, see superfish.css
  */
-#main-menu-nav {
-}
-ul.sf-menu {
-	font-family: Spinnaker;
-	text-transform: lowercase;
-	font-size: 1.1em;
-}
-ul.sf-menu > li {
-	opacity: 0.9;
-}
-ul.sf-menu > ul {
-	text-transform: none;
-}
-ul.sf-menu > ul > li.first.leaf {
-	border-top: 1px solid #F00;
-}
-ul.sf-menu > a {
-	border-bottom: 2px groove #AAA;
-}
-
 
 /**
  * Secondary menu

@@ -16,7 +16,9 @@ body {
   padding: 0;
 }
 
+/** Body styles go here */
 #page-wrapper {
+
 }
 
 #page {
@@ -66,7 +68,7 @@ body {
 
 #name-and-slogan /* Wrapper for website name and slogan */ {
   width: 100%;
-  margin: 2em 0 5em 0;
+  margin: 2em 0;
 }
 
 h1#site-name,
@@ -133,6 +135,12 @@ h2.title, /* Comment section heading */
 h2.comment-form, /* Comment form heading */
 h3.title /* Comment title */ {
   margin: 0;
+  color: #E0401C;
+}
+
+/** Don't show frontpage title */
+.front h1.title {
+  display: none;
 }
 
 tr.even /* Some tables have rows marked even or odd. */ {
@@ -246,7 +254,18 @@ ul.links li {
  */
 .region-footer {
 }
-
+#footer_wrapper #footer h2 {
+  color: #E5B051;
+  text-shadow: -1px -1px 1px #666;
+}
+#footer,
+#footer a:visited {
+  color: #FFF;
+}
+#footer ul {
+  list-style: none;
+  padding: 0;
+}
 /*
  * Page bottom
  */

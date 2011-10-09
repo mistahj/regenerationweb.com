@@ -43,8 +43,8 @@ body {
   /*font-size: 0.875em; /* 16px x .875 = 14px */
   /*line-height: 1.5em; /* 14px x 1.5 = 21px */
 
-  /* Use a 16px base font size with a 21px line height */
-  font-size: 1.00em; /* 16px x 1 = 16px */
+  /* Use a 18px base font size with a 24px line height */
+  font-size: 1.125em; /* 16px x 1.25 = 16px */
   line-height: 1.714em; /* 14px x 1.5 = 24px */
 }
 
@@ -81,6 +81,7 @@ body {
  */
 
 body,
+p,
 caption,
 th,
 td,
@@ -113,7 +114,8 @@ fieldset {
   font-family: "Courier New", "DejaVu Sans Mono", monospace;
 
    */
-  font-family: "Helvetica", "Arial", "Nimbus Sans L", sans-serif;
+  font-family: "adobe-garamond-pro", Palatino, Georgia, "DejaVu Serif", serif;
+  color: #272F30;
 }
 
 pre,
@@ -143,7 +145,8 @@ hr, table, fieldset {
 /* Headings */
 
 h1, h2, h3 {
-  font-family: 'Spinnaker';
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  /*font-family: 'Spinnaker', 'Futura', 'Helvetica', 'Arial', 'Ubuntu Sans' sans-serif;*/
 }
 
 h1 {
@@ -158,6 +161,7 @@ h1 {
   font-size: 2em;
   line-height: 1.5em;
   margin: 0.75em 0;
+  /*text-transform: uppercase;*/
 }
 
 h2 {
@@ -179,8 +183,7 @@ h6 {
 
 /* Other block-level elements */
 p {
-  font-family: 'Palatino', 'Garamond';
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: #272F30; /* dark blue */
 }
 

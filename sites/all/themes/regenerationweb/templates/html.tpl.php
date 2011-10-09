@@ -69,6 +69,10 @@
   <?php print $styles; ?>
   <?php print $scripts; ?>
 
+  <!-- Load custom TypeKit fonts -->
+  <script type="text/javascript" src="http://use.typekit.com/vgc7fhg.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
   <script language="javascript">
     jQuery(document).ready(function() {
         var rootEl = jQuery('#main-menu-nav > ul');

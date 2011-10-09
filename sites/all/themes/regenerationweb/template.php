@@ -69,7 +69,7 @@
  */
 function regenerationweb_preprocess_html(&$variables, $hook) {
   
-  drupal_add_css('http://fonts.googleapis.com/css?family=Nixie+One|EB+Garamond|Spinnaker|Cantarell:700', array('type' => 'external'));
+  drupal_add_css('http://fonts.googleapis.com/css?family=Spinnaker|Cantarell:700', array('type' => 'external'));
   //$variables['sample_variable'] = t('Lorem ipsum.');
 
   // The body tag's classes are controlled by the $classes_array variable. To

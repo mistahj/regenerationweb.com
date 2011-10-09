@@ -69,8 +69,8 @@
  */
 ?>
 <div id="edge-colors" class="clearfix"></div>
-<div id="page-wrapper" class="container_24">
-  <div id="page">
+<div id="page-wrapper">
+  <div id="page" class="container_24">
 
   <div id="header">
     <div class="section clearfix">
@@ -143,8 +143,8 @@
 
 </div></div><!-- /#page, /#page-wrapper -->
 
-<div id="footer_wrapper" class="container_24">
-  <div id="footer" class="grid_24">
+<div id="footer_wrapper" class="clearfix">
+  <div id="footer">
     <?php print render($page['footer']); ?>
   </div>
 </div>
