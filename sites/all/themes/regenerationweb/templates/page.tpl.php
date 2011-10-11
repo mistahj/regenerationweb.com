@@ -144,7 +144,7 @@
 </div></div><!-- /#page, /#page-wrapper -->
 
 <div id="footer_wrapper" class="clearfix">
-  <div id="footer">
+  <div id="footer" class="container_24" >
     <?php print render($page['footer']); ?>
   </div>
 </div>
