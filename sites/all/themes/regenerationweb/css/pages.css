@@ -241,7 +241,7 @@ ul.links li {
  * Second sidebar (on right in LTR languages, on left in RTL)
  *
  * Remember to NOT add padding or margin to your .region-sidebar-second
- * (see the layout.css file.)
+ * (see the layout.css file.) 
  */
 .region-sidebar-second {
 }
@@ -255,10 +255,16 @@ ul.links li {
 .region-footer {
 }
 #footer_wrapper #footer h2 {
-  color: #E5B051;
-  text-shadow: -1px -1px 1px #666;
+  color: #556677;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-family: Spinnaker;
+  text-shadow: -1px -1px 1px #000;
 }
 #footer,
+#footer a {
+  text-decoration: none;
+}
 #footer a:visited {
   color: #FFF;
 }
