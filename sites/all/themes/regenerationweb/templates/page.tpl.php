@@ -145,7 +145,15 @@
 
 <div id="footer_wrapper" class="clearfix">
   <div id="footer" class="container_24" >
-    <?php print render($page['footer']); ?>
+    <div class="grid_8 alpha">
+      <?php print render($page['footer_l']); ?>
+    </div>
+    <div class="grid_8">
+      <?php print render($page['footer_m']); ?>
+    </div>
+    <div class="grid_8 omega">
+      <?php print render($page['footer_r']); ?>
+    </div>
   </div>
 </div>
 

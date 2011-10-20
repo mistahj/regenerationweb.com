@@ -6,8 +6,6 @@
 ; lines in this file, you MUST refresh Drupal 7's cache by simply visiting the
 ; Appearance page at admin/appearance.
 
-
-
 ; The name, description and screenshot used for this theme on the Appearance
 ; page at admin/appearance.
 
@@ -52,7 +50,6 @@ stylesheets[all][]         = css/external/flexslider/flexslider.css
 
 ;stylesheets[print][]      = css/print.css
 
-
 ; Example of adding handheld stylesheets. The iPhone's preferred media type
 ; is based on the CSS3 Media queries. http://www.w3.org/TR/css3-mediaqueries/
 
@@ -95,7 +92,9 @@ regions[navigation]     = Navigation bar
 regions[highlighted]    = Highlighted
 regions[content]        = Content
 regions[header]         = Header
-regions[footer]         = Footer
+regions[footer_l]       = FooterLeft
+regions[footer_m]       = FooterMiddle
+regions[footer_r]       = FooterRight
 regions[bottom]         = Page bottom
 regions[page_top]       = Page top
 regions[page_bottom]    = Page bottom
