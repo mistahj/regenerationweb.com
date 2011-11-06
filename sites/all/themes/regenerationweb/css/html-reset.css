@@ -347,17 +347,28 @@ button {
  * The order of link states are based on Eric Meyer's article:
  * http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
  */
-a:link {
+a, a:link {
+  color: #C0100C;
+  -ms-transition: color .25s linear;
+  -webkit-transition: color .25s linear;
+  -moz-transition: color .25s linear;
+  -o-transition: color .25s linear;
+  transition: color .25s linear;
 }
 
+
 a:visited {
+  color: #C0100C;
 }
 
 a:hover,
 a:focus {
+  color: #E0401C;
 }
 
 a:active {
+  color: #333;
+  text-decoration: underline;
 }
 
 /*

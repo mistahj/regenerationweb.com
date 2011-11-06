@@ -26,3 +26,49 @@
 #block-views-regenannouncementcarousel-block .RegenEvent.carousel-body {
   display: none;
 }
+
+#block-views-regenannouncementcarousel-block ul.slides {
+  height: 472px;
+  overflow: hidden;
+}
+
+#block-views-regenannouncementcarousel-block ul.slides li {
+  text-align: center;
+  background-color: #333;
+  width: 630px !important;
+  height: 472px;
+}
+#block-views-regenannouncementcarousel-block ul.slides img {
+  margin: 0 auto;
+}
+#block-views-regenannouncementcarousel-block p.flex-caption {
+  margin: 0;
+  padding: 4%;
+  width: 92%;
+}
+#block-views-regenannouncementcarousel-block p.flex-caption a {
+  color: white;
+  font-size: 1.4em;
+}
+#block-views-regeneventlist-block ul {
+  list-style: none;
+  margin: 1em 0 0 0;
+  padding: 0;
+}
+
+#block-views-regeneventlist-block ul li {
+  padding: 1em 0;
+  border-top: 2px groove #CCC;
+}
+
+#block-views-regeneventlist-block .views-field-title {
+  font-size: 1.1em
+}
+
+#block-views-regeneventlist-block .views-field-body {
+  font-style: italic;
+  font-size: 0.9em;
+}
+#block-views-regeneventlist-block .views-field.date {
+  font-size: 0.9em;
+}
