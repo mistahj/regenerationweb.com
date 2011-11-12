@@ -8,7 +8,8 @@
   /* point right for anchors in subs */
   /* apply hovers to modern browsers */
   /** shadows for all but IE6 ** */
-  /*First level styles */ }
+  /*First level styles */
+  /* Disable all nonleaf menu nodes from being clicked. */ }
   #header .menu {
     margin: 0;
     padding: 0;
@@ -149,3 +150,6 @@
       text-transform: none;
       font-style: italic;
       font-size: 1.2em; }
+  #header ul.menu li.expanded > a {
+    pointer-events: none;
+    cursor: default; }

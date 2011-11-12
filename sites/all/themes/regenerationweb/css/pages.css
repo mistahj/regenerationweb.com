@@ -259,23 +259,35 @@ ul.links li {
   padding-top: 1em;
 }
 #footer p {
-  color: #FFF;
+  color: #F7EDB7;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.9em;
 }
 #footer_wrapper #footer h2 {
-  color: #C4CCDA;
-  font-size: 1.5em;
-  text-shadow: -1px -1px 1px #333;
+  border-bottom: 2px groove rgba(127,127,127,0.8);
+  color: #CCC;
+  font-size: 1.2em;
+  margin-right: 1em;
+  padding: 0.3em 0.3em 0.5em 0;
+  text-shadow: 1px 1px 1px rgba(55,55,55,0.8);
 }
-#footer,
 #footer a {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #E0D697;
   text-decoration: none;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.2), -1px -1px rgba(0,0,0,0.3); 
 }
+#footer a:hover {color: #E0401C}
 #footer a:visited {
-  color: #FFF;
+  color: #F7EDB7;
 }
 #footer ul {
   list-style: none;
   padding: 0;
+}
+#footer ul li {
+  margin-bottom: 0.5em;
 }
 /*
  * Page bottom
