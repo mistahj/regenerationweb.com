@@ -25,13 +25,16 @@ body {
 #page {
 }
 
-#edge-colors {
-  height: 8px;
+.edge-colors {
 }
 
-#edge-colors div {
-  height: 8px;
+.edge-colors div {
   float: left;
+  height: 6px;
+}
+
+#footer_wrapper .edge-colors div {
+  height: 3px;
 }
 
 /*

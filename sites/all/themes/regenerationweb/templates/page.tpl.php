@@ -68,7 +68,7 @@
  * @see template_process()
  */
 ?>
-<div id="edge-colors" class="clearfix"></div>
+<div class="edge-colors clearfix"></div>
 <div id="page-wrapper">
   <div id="page" class="container_24">
 
@@ -144,7 +144,8 @@
 </div></div><!-- /#page, /#page-wrapper -->
 
 <div id="footer_wrapper" class="clearfix">
-  <div id="footer" class="container_24" >
+  <div class="edge-colors clearfix"></div>
+  <div id="footer" class="container_24">
     <div class="grid_8 alpha">
       <?php print render($page['footer_l']); ?>
     </div>

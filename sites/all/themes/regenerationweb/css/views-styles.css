@@ -38,15 +38,21 @@
   width: 630px !important;
   height: 472px;
   display: none;
+  position: relative;
 }
 #block-views-regenannouncementcarousel-block ul.slides img {
   margin: 0 auto;
 }
 #block-views-regenannouncementcarousel-block p.flex-caption {
   margin: 0;
+  position: absolute;
   padding: 4%;
-  width: 92%;
-  background-color: rgba(0, 0, 0, 0.5);
+  /*width: 92%;*/
+  width: auto;
+  float: left;
+  left: 10%;
+  bottom: 10%;
+  background-color: rgba(0, 0, 0, 0.4);
   font-family: "Spinnaker", "Futura", sans-serif;
 }
 #block-views-regenannouncementcarousel-block p.flex-caption a {

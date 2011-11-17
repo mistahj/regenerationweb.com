@@ -76,8 +76,6 @@
   <script language="javascript">
     jQuery(document).ready(function() {
         var rootEl = jQuery('#header #main-menu-nav > ul');
-        rootEl.addClass('sf-menu');
-        rootEl.superfish();
     });
   </script>
 

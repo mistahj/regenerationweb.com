@@ -15,10 +15,9 @@ var THEME_COLORS = ['#E0401C', '#E5B051', '#272F30', '#F7EDB7', '#9E2B20'];
     });
 
     // Render colors.
-    var renderTopEdgeColors = function() {
+    var renderTopEdgeColors = function(container) {
       var NUM_BOXES = 40;
       var BOX_WIDTH = $(window).width() / NUM_BOXES;
-      var edgeEl = $('#edge-colors');
 
       for (var i = 0; i < NUM_BOXES; i++) {
         var boxEl = $('<div>&nbsp;</div>').attr({
@@ -27,10 +26,10 @@ var THEME_COLORS = ['#E0401C', '#E5B051', '#272F30', '#F7EDB7', '#9E2B20'];
             'background-color:'+THEME_COLORS[Math.floor(Math.random()*THEME_COLORS.length)]+
             ';width:'+BOX_WIDTH+'px'
         });
-        edgeEl.append(boxEl);
+        container.append(boxEl);
       }
     };
-    renderTopEdgeColors();
+    renderTopEdgeColors($('.edge-colors'));
   })
 })(jQuery);
 
