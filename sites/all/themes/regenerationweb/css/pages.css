@@ -193,6 +193,13 @@ div.tabs /* See also the tabs.css file. */ {
 .region-content /* Wrapper for the actual page content */ {
 }
 
+/** Image styles **/
+.field-name-field-image-graphic img {
+  padding: 5px;
+  background-color: #FFF;
+  box-shadow: 0 0 8px rgba(0,0,0,0.4);
+}
+
 ul.links /* List of links */ {
 }
 

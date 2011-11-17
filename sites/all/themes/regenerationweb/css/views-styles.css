@@ -37,6 +37,7 @@
   background-color: #333;
   width: 630px !important;
   height: 472px;
+  display: none;
 }
 #block-views-regenannouncementcarousel-block ul.slides img {
   margin: 0 auto;
@@ -83,3 +84,7 @@
   font-size: 0.7em;
   font-family: "Spinnaker","Futura",sans-serif;
 }
+
+/**
+ * 2-col panel layout
+ */
