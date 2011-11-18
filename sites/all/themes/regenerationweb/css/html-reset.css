@@ -114,7 +114,7 @@ fieldset {
   font-family: "Courier New", "DejaVu Sans Mono", monospace;
 
    */
-  font-family: "adobe-garamond-pro", Palatino, Georgia, "DejaVu Serif", serif;
+  font-family: adobe-garamond-pro, "Garamond", Palatino, Georgia, "DejaVu Serif", serif;
   color: #272F30;
 }
 
@@ -145,7 +145,7 @@ hr, table, fieldset {
 /* Headings */
 
 h1, h2, h3 {
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: adelle, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   /*font-family: 'Spinnaker', 'Futura', 'Helvetica', 'Arial', 'Ubuntu Sans' sans-serif;*/
 }
 
@@ -163,7 +163,7 @@ h1 {
 }
 
 h2, h3 {
-    font-family: 'Spinnaker', 'Futura', 'Helvetica', 'Arial', 'Ubuntu Sans' sans-serif;
+    font-family: adelle, 'Futura', 'Helvetica', 'Arial', 'Ubuntu Sans' sans-serif;
 }
 
 h2 {

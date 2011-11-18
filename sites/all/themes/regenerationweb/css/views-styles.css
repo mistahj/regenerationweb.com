@@ -46,6 +46,7 @@
 #block-views-regenannouncementcarousel-block p.flex-caption {
   margin: 0;
   position: absolute;
+  opacity: 0;
   padding: 4%;
   /*width: 92%;*/
   width: auto;
@@ -53,7 +54,9 @@
   left: 10%;
   bottom: 10%;
   background-color: rgba(0, 0, 0, 0.4);
-  font-family: "Spinnaker", "Futura", sans-serif;
+}
+#block-views-regenannouncementcarousel-block:hover p.flex-caption {
+  opacity: 1;
 }
 #block-views-regenannouncementcarousel-block p.flex-caption a {
   color: white;
@@ -74,8 +77,8 @@
 }
 
 #block-views-regeneventlist-block ul li {
-  padding: 1em 0;
-  border-top: 2px groove #CCC;
+  padding: 0.5em 0;
+  border-top: 2px groove #FFF;
 }
 
 #block-views-regeneventlist-block .views-field-title {

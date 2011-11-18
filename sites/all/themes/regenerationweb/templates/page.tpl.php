@@ -147,6 +147,7 @@
   <div class="edge-colors clearfix"></div>
   <div id="footer" class="container_24">
     <div class="grid_8 alpha">
+      
       <?php print render($page['footer_l']); ?>
     </div>
     <div class="grid_8">
