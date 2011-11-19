@@ -88,7 +88,6 @@
         li
           /*	background:		#333;
       &:hover, &.sfHover
-        /*background:		#F3F3F3;
         /*    color:          #FFF;
         outline: 0
     a
@@ -112,7 +111,7 @@
     position: absolute
     display: block
     right: .75em
-    top: 1.5em
+    top: 1.3em
     /* IE6 only
     width: 10px
     height: 10px
@@ -124,7 +123,7 @@
   a
     > .sf-sub-indicator
       /* give all except IE6 the correct values
-      top: .8em
+      top: .6em
       background-position: 0 -100px
       /* use translucent arrow for modern browsers
     &:focus > .sf-sub-indicator, &:hover > .sf-sub-indicator, &:active > .sf-sub-indicator
@@ -158,28 +157,34 @@
 
   /*** shadows for all but IE6 **
 
-  .sf-shadow ul
-    /*background:	url('../images/shadow.png') no-repeat bottom right;
-    /*padding: 0 8px 9px 0
-    /*-moz-border-radius-bottomleft: 17px
-    /*-moz-border-radius-topright: 17px
-    /*-webkit-border-top-right-radius: 17px
-    /*-webkit-border-bottom-left-radius: 17px
-    &.sf-shadow-off
-      /*background: transparent;
+  /*
+    .sf-shadow ul
+      background:	url('../images/shadow.png') no-repeat bottom right
+      padding: 0 8px 9px 0
+      -moz-border-radius-bottomleft: 17px
+      -moz-border-radius-topright: 17px
+      -webkit-border-top-right-radius: 17px
+      -webkit-border-bottom-left-radius: 17px
+      &.sf-shadow-off
+        background: transparent */
 
   /** First level styles
 
   ul.menu li
     text-shadow: 1px 1px 1px #FFF
-    font-family: "Spinnaker", "Futura", sans-serif
+    font-family: "adelle", "Futura", sans-serif
     color: #272F30
+    font-weight: bold
     text-transform: uppercase
+    border-bottom: 1px solid #FFF
+    &:hover, &.sfHover
+      background: #F3F3F3
+      border-bottom: 1px solid #CCC
     &.expanded > ul a
-      font-family: "adobe-garamond-pro", Georgia, serif
+      font-family: adelle, "adobe-garamond-pro", Georgia, serif
       text-transform: none
+      font-weight: normal
       font-style: italic
-      font-size: 1.2em
 
   /* Disable all nonleaf menu nodes from being clicked.
   ul.menu li.expanded > a

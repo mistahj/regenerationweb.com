@@ -18,7 +18,6 @@
 .panel-2col .panel-col-last { 
   float: left; 
   width: 50%; 
-  font-size: 0.8em;
 }
 .panel-2col .panel-col-last h3 { 
   color: #E0401C; /* special yellow color */
