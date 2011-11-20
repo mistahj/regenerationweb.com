@@ -15,7 +15,7 @@ body {
 }
 
 #page-wrapper {
-  background-color: #F1EDE4;
+  background: #F1EDE4 url(/sites/all/themes/regenerationweb/images/100-100-5-monochrome.png) repeat;
 }
 
 #page {

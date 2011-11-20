@@ -35,6 +35,18 @@ h2.block-title /* Block title */ {
 #block-block-1 /* First block created with "Add block" link */ {
 }
 
+/**
+ * Flickr block
+ */
+.block.block-flickr .content {
+  margin-top: 0.5em;
+}
+.block.block-flickr .flickr-photo-img {
+  padding: 2px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.5);
+  margin: 0.2em;
+  background-color: #FFF;
+}
 
 /**
  * Twitter block
@@ -96,6 +108,10 @@ h2.block-title /* Block title */ {
 }
 
 #block-search-form /* "Search form" block */ {
+}
+#block-search-form input[type=text] {
+  width: 180px;
+  border: 0;
 }
 
 #block-shortcut-shortcuts /* "Shortcuts" block */ {

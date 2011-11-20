@@ -56,6 +56,7 @@ body {
  * Header
  */
 #header {
+  position: relative;
 }
 
 #header .section {
@@ -73,14 +74,14 @@ body {
 
 #name-and-slogan /* Wrapper for website name and slogan */ {
   width: 100%;
-  margin: 2em 0;
+  margin: 1.5em 0;
 }
 
 h1#site-name,
 div#site-name /* The name of the website */ {
   margin: 0;
+  font-size: 5em;
   text-align: center;
-  font-size: 6em;
   line-height: 1.5em;
   text-shadow: 1px 1px 2px #FFF;
   font-family: Spinnaker, Futura, Helvetica Neue, sans-serif;
@@ -93,13 +94,8 @@ div#site-name /* The name of the website */ {
   text-decoration: none;
 }
 
-#site-name a:hover,
-#site-name a:focus {
-  text-decoration: underline;
-}
-
 #site-slogan /* The slogan (or tagline) of a website */ {
-  display: none;
+  margin-left: -9999px;
 }
 
 .region-header /* Wrapper for any blocks placed in the header region */ {

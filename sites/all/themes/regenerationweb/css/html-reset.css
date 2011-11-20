@@ -114,8 +114,10 @@ fieldset {
   font-family: "Courier New", "DejaVu Sans Mono", monospace;
 
    */
-  font-family: adobe-garamond-pro, "Garamond", Palatino, Georgia, "DejaVu Serif", serif;
-  color: #272F30;
+  /*font-family: "Garamond", Palatino, Georgia, "DejaVu Serif", serif;*/
+  font-family: adelle, Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  color: #373F40;
+  font-size: 0.95em;
 }
 
 pre,
