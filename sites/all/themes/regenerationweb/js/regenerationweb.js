@@ -1,10 +1,11 @@
-var THEME_COLORS = ['#E0401C', '#E5B051', '#272F30', '#F7EDB7', '#9E2B20'];
+var THEME_COLORS = ['#E0401C', '#E5B051', '#F7EDB7', '#9E2B20', '#40350A'];
+// '#272F30' is dark blue
 
 (function($) {
   $(window).ready(function() {
     // Image carousel widget on front page.
     $('.flex-slider').flexslider({
-          animation: "fade",
+          animation: "slide",
           controlsContainer: ".flex-container"
     });
 
@@ -32,7 +33,7 @@ var THEME_COLORS = ['#E0401C', '#E5B051', '#272F30', '#F7EDB7', '#9E2B20'];
       var downloadEl = linkEl.clone().addClass('media-embed').text($(el).text());
       containerEl.find('.feed-item-meta').after(linkEl).after(downloadEl);
     });
-    
+    // Insert media players into anything tagged media-embed 
     $('.media-embed').media({
       height: 24,
       caption: false,

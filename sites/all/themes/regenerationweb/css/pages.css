@@ -26,7 +26,8 @@ body {
 }
 
 .edge-colors {
-  overflow: hidden
+  overflow: hidden;
+  height: 6px;
 }
 
 .edge-colors div {
@@ -34,6 +35,7 @@ body {
   height: 6px;
 }
 
+#footer_wrapper .edge-colors,
 #footer_wrapper .edge-colors div {
   height: 3px;
 }

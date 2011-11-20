@@ -56,6 +56,8 @@
  * - $page['help']: Dynamic help text, mostly for admin pages.
  * - $page['highlighted']: Items for the highlighted content region.
  * - $page['content']: The main content of the current page.
+ * - $page['content_left_col']: two-col grid under content
+ * - $page['content_right_col']: two-col grid under content
  * - $page['sidebar_first']: Items for the first sidebar.
  * - $page['sidebar_second']: Items for the second sidebar.
  * - $page['header']: Items for the header region.
@@ -122,6 +124,8 @@
         <?php print render($page['content']); ?>
         <?php print $feed_icons; ?>
       </div>
+      <div class="section grid_8 alpha"><?php print render($page['content_left_col']); ?></div>
+      <div class="section grid_8 omega"><?php print render($page['content_right_col']); ?></div>
     </div><!-- /.section, /#content -->
     
     <? if ($has_sidebar): ?>
