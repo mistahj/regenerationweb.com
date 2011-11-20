@@ -242,7 +242,8 @@ ul.links li {
 }
 
 .more-link /* Aggregator, blog, and forum more link */ {
-  display: none;
+  font-style: italic;
+  margin-right: 2em;
 }
 
 /*
