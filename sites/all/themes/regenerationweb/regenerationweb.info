@@ -73,6 +73,7 @@ scripts[] = js/underscore-min.js
 scripts[] = js/hoverIntent.js
 scripts[] = js/superfish.js
 scripts[] = js/external/flexslider/jquery.flexslider-min.js
+scripts[] = js/external/media/jquery.media.js
 scripts[] = js/regenerationweb.js
 
 
