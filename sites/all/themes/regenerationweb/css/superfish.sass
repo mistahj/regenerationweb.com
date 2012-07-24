@@ -167,25 +167,30 @@
       &.sf-shadow-off
         background: transparent */
 
-  /** First level styles
+  /** Menu link styles
+  ul.menu
+    li
+      text-shadow: 1px 1px 1px #FFF
+      font-family: "adelle", "Futura", sans-serif
+      color: #272F30
+      font-weight: bold
+      text-transform: uppercase
+      border-bottom: 1px solid #FFF
+      background-color: transparent
+      &:hover, &.sfHover
+        background: #F3F3F3
+        border-bottom: 1px solid #CCC
+      &.expanded > ul a
+        font-family: adelle, "adobe-garamond-pro", Georgia, serif
+        text-transform: none
+        font-weight: normal
+        font-style: italic
 
-  ul.menu li
-    text-shadow: 1px 1px 1px #FFF
-    font-family: "adelle", "Futura", sans-serif
-    color: #272F30
-    font-weight: bold
-    text-transform: uppercase
-    border-bottom: 1px solid #FFF
-    &:hover, &.sfHover
-      background: #F3F3F3
-      border-bottom: 1px solid #CCC
-    &.expanded > ul a
-      font-family: adelle, "adobe-garamond-pro", Georgia, serif
-      text-transform: none
-      font-weight: normal
-      font-style: italic
-
-  /* Disable all nonleaf menu nodes from being clicked.
-  ul.menu li.expanded > a
-    pointer-events: none
-    cursor: default
+      /* second, third-level styles */
+      &.expanded
+        ul.menu li
+          background-color: white
+        /* Disable all nonleaf menu nodes from being clicked.
+        > a
+          pointer-events: none
+          cursor: default
