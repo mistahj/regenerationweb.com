@@ -161,3 +161,6 @@
       #header ul.menu li.expanded > a {
         pointer-events: none;
         cursor: default; }
+        #header ul.menu li.expanded > a.enabled {
+          pointer-events: auto;
+          cursor: pointer; }
