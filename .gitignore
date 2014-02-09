@@ -1,11 +1,7 @@
 .DS_Store
-#*
 *~
-#sites/*/settings
-# AHAO: I'm following the suggested gitignore suggested here:
-# https://drupal.org/node/803746
-# Ignore configuration files that may contain sensitive information.
-sites/*/settings*.php
-# # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
+sites/*/settings*.php
+vendor
+*.sql
