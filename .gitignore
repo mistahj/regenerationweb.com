@@ -1,5 +1,6 @@
 .DS_Store
-#*
 *~
-sites/default/*
+sites/*/files
+sites/*/private
+sites/*/settings*.php
 
