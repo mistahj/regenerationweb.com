@@ -2,7 +2,10 @@
 
 ## Installation
 
-### Drush
+### Composer
 
-Follow the install instructions at: http://pear.drush.org/
-You'll want to have Composer installed.
+Follow instructions at getcomposer.org
+
+    $ curl -sS https://getcomposer.org/installer | php
+    $ php composer.phar install
+

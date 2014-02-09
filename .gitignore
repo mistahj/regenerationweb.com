@@ -3,4 +3,4 @@
 sites/*/files
 sites/*/private
 sites/*/settings*.php
-
+vendor
