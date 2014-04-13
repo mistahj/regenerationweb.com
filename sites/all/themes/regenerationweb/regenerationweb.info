@@ -70,6 +70,7 @@ stylesheets-conditional[lte IE 6][all][]  = css/ie6.css
 
 ;scripts[] = js/jquery.1.6.1.min.js
 scripts[] = js/underscore-min.js
+scripts[] = js/jquery.migrate.js
 scripts[] = js/hoverIntent.js
 scripts[] = js/superfish.js
 scripts[] = js/external/flexslider/jquery.flexslider-min.js
