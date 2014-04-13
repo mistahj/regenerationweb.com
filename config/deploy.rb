@@ -1,15 +1,16 @@
 set :application, "regenerationweb"
-set :repository,  "git@github.com:regenerationweb/regenerationweb.com.git"
+set :repository,  "https://github.com/regenerationweb/regenerationweb.com.git"
 set :deploy_to, "~/#{application}"
-
+set :app_path, "#{deploy_to}/current"
 set :use_sudo, false
 set :user, :regenera
 set :application, "regenerationweb"
 
-#set :ssh_options, { port: 2222 }
+set :shared_children, []
+set :ssh_options, { port: 2222 }
 #set :port, 2222
 
-role :app, "regenerationweb.com", primary: true, port: 2222, user: "regenera"
+role :app, "regenerationweb.com", primary: true
 
 
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
