@@ -5,9 +5,9 @@ package = Flickr
 configure = admin/structure/block
 dependencies[] = flickr
 
-; Information added by Drupal.org packaging script on 2014-02-10
-version = "7.x-1.3"
+; Information added by Drupal.org packaging script on 2014-03-26
+version = "7.x-1.4"
 core = "7.x"
 project = "flickr"
-datestamp = "1392041009"
+datestamp = "1395826443"
 
