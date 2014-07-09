@@ -1,38 +1,44 @@
 (function($){
   Drupal.behaviors.locationmap = {
     attach: function(context, settings) {
-      if (GBrowserIsCompatible()) {
-        var locationmap = new GMap2(document.getElementById("locationmap_map"));
-        target_point = new GLatLng(Drupal.settings.locationmap.lat, Drupal.settings.locationmap.lng);
-        locationmap.setCenter(target_point, parseInt(Drupal.settings.locationmap.zoom));
-        var geocoder = new GClientGeocoder();
-        var admin = Drupal.settings.locationmap.admin;
-        address = Drupal.settings.locationmap.address;
-        description = Drupal.settings.locationmap.info;
-        locationmap.addControl(new GMapTypeControl());
-        locationmap.addControl(new GSmallMapControl());
-        Drupal.settings.locationmap.marker = new GMarker(target_point, {draggable: (admin == true)});
-        locationmap.addOverlay(Drupal.settings.locationmap.marker);
-        locationmap.setMapType(eval(Drupal.settings.locationmap.type));
-        GEvent.addListener(Drupal.settings.locationmap.marker, "click", function() {
-        Drupal.settings.locationmap.marker.openInfoWindowHtml(description);
-        });
-        
-        // Allow fine tuning of the marker position in admin mode.
-        if (admin) {
-          GEvent.addListener(Drupal.settings.locationmap.marker, "dragstart", function() {
-            Drupal.settings.locationmap.marker.closeInfoWindow();
-          });
-          GEvent.addListener(Drupal.settings.locationmap.marker, "dragend", function() {
-            Drupal.settings.locationmap.marker.openInfoWindowHtml(description);
-            latlng = Drupal.settings.locationmap.marker.getLatLng();
-            $('#edit-locationmap-lat').val(latlng.lat());
-            $('#edit-locationmap-lng').val(latlng.lng());
-          });
-          GEvent.addListener(locationmap, "zoomend", function() {
-            $('#edit-locationmap-zoom').val(locationmap.getZoom());
-          });
+      var target_point = new google.maps.LatLng(Drupal.settings.locationmap.lat, Drupal.settings.locationmap.lng);
+
+      var mapOptions = {
+        zoom: parseInt(Drupal.settings.locationmap.zoom),
+        center: target_point,
+        mapTypeId: eval(Drupal.settings.locationmap.type),
+        mapTypeControl: true
         };
+
+      var map = new google.maps.Map(document.getElementById("locationmap_map"), mapOptions);
+
+      var markerOptions = {
+        position: target_point,
+        draggable: Drupal.settings.locationmap.admin,
+        map: map
+      };
+
+      var marker = new google.maps.Marker(markerOptions);
+
+      var infowindow = new google.maps.InfoWindow({
+        content: Drupal.settings.locationmap.info
+      });
+
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.open(map, marker);
+      });
+
+      // Allow fine tuning of the marker position in admin mode.
+      if (Drupal.settings.locationmap.admin) {
+
+        google.maps.event.addListener(marker, 'dragend', function(event) {
+          $('#edit-locationmap-lat').val(event.latLng.lat());
+          $('#edit-locationmap-lng').val(event.latLng.lng());
+        });
+
+        google.maps.event.addListener(map, 'zoom_changed', function(event) {
+          $('#edit-locationmap-zoom').val(map.getZoom());
+        });
       }
     }
   };

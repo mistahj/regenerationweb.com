@@ -23,17 +23,17 @@ function locationmap_update_104() {
   // Loop over all the changes, performing necessary updates.
   foreach ($replace as $old_permission => $new_permission) {
     db_update('role_permission')
-    	->fields(array('permission' => $new_permission, 'module' => 'locationmap'))
-		->condition('rid', 3, '<>')
-    	->condition('permission', $old_permission)
-        ->execute();
+      ->fields(array('permission' => $new_permission, 'module' => 'locationmap'))
+      ->condition('rid', 3, '<>')
+      ->condition('permission', $old_permission)
+      ->execute();
   }
 
   // Update any URL aliases previously set for gmaplocation to point to locationmap.
   db_update('url_alias')
     ->fields(array('source' => 'locationmap'))
     ->condition('source', 'gmaplocation')
-      ->execute();
+    ->execute();
 
   // Create locationmap variables. If gmaplocation variables exist, set to those values.
   variable_set('locationmap_address', variable_get('gmaplocation_address'));
@@ -69,6 +69,61 @@ function locationmap_update_104() {
   // nothing or a translated string indicating the update ran successfully.
   // See http://drupal.org/node/224333#update_sql.
   return t('Upgraded any legacy permissions and variables from gmaplocation module to locationmap.');
+}
+
+/**
+ * Change maps API v2 variables to v3 values.
+ * Unset the API key var, as it's not required any more.
+ */
+
+function locationmap_update_105() {
+
+  $locationmap_type = variable_get('locationmap_type', '');
+
+  // Only do anything if this is set
+  if ($locationmap_type) {
+
+    // Maps old values to new values:
+    $locationmap_type_new = array(
+      'G_NORMAL_MAP' => 'google.maps.MapTypeId.ROADMAP',
+      'G_SATELLITE_MAP' => 'google.maps.MapTypeId.SATELLITE',
+      'G_HYBRID_MAP' => 'google.maps.MapTypeId.HYBRID',
+    );
+
+    // Only reset this if it's a value we can translate:
+    if (isset($locationmap_type_new[$locationmap_type])) {
+      variable_set('locationmap_type', $locationmap_type_new[$locationmap_type]);
+    }
+  }
+
+  // We don't need this any more
+  variable_del('locationmap_key');
+}
+
+/**
+ * Upgrade text fields to enable enable rich text/full HTML and WYSIWYG editors.
+ */
+function locationmap_update_106() {
+  $locationmap_info = variable_get('locationmap_info');
+  if(is_array($locationmap_info)) {
+    // If a user has already had their variables upgraded by running the 7.x-2.x-dev branch
+    // do not run the update.
+    return t('No upgrade to variables required as this had already occurred while running the 7.x-2.x-dev branch.');
+  } else {
+    variable_set('locationmap_info', array(
+      'value' => variable_get('locationmap_info'),
+      'format' => filter_default_format(),
+      ));
+    variable_set('locationmap_body', array(
+      'value' => variable_get('locationmap_body'),
+      'format' => filter_default_format(),
+      ));
+    variable_set('locationmap_footer', array(
+      'value' => variable_get('locationmap_footer'),
+      'format' => filter_default_format(),
+    ));
+  return t('Location Map text fields updated to support rich text/full HTML and WYSIWYG editors.');
+  }
 }
 
 /**

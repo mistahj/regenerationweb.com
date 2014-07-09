@@ -4,9 +4,9 @@ core = 7.x
 package = Flickr
 configure = admin/config/media/flickr
 
-; Information added by Drupal.org packaging script on 2014-03-26
-version = "7.x-1.4"
+; Information added by Drupal.org packaging script on 2014-06-26
+version = "7.x-1.6"
 core = "7.x"
 project = "flickr"
-datestamp = "1395826443"
+datestamp = "1403814832"
 
