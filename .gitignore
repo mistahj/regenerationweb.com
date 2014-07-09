@@ -3,6 +3,5 @@
 #sites/*/files/
 #sites/*/private/*
 sites/*/settings*.php
-sites/default/files/*
 vendor
 *.sql
