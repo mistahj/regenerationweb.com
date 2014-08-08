@@ -1,7 +1,6 @@
-.DS_Store
-*~
-#sites/*/files/
-#sites/*/private/*
+# Ignore configuration files that may contain sensitive information.
 sites/*/settings*.php
-vendor
-*.sql
+
+# Ignore paths that contain user-generated content.
+sites/*/files
+sites/*/private
