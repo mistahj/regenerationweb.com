@@ -8,7 +8,8 @@ set :repo_url, 'https://github.com/regenerationweb/regenerationweb.com.git'
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, "~/regenerationweb"
+set :deploy_to, "/home/regenera/regenerationweb"
+set :backup_to, "/home/regenera/regenerationweb/shared/database_backups"
 
 # Default value for :scm is :git
 # set :scm, :git
@@ -33,6 +34,21 @@ set :linked_dirs, %w{sites/default/files}
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
+
+namespace :drush do
+  desc "Backup the database"
+  task :backupdb do
+    on roles(:app) do
+      release_name = Time.now.utc.strftime("%Y%m%d.%H%M%S")
+      filepath = "#{fetch(:backup_to)}/#{release_name}.sql"
+      gzipped_filepath = "#{filepath}.gz"
+      execute "rm #{fetch(:backup_to)}/*.sql*"
+      execute "~/bin/drush/drush -r #{deploy_to}/current sql-dump --result-file=#{filepath}"
+      execute "gzip #{filepath}"
+      download! gzipped_filepath, "db"
+    end
+  end
+end
 
 namespace :deploy do
 
