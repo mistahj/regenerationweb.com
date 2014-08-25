@@ -5,6 +5,6 @@ sites/*/settings*.php
 sites/*/files
 sites/*/private
 
-db/*
+db/*.sql.gz
 
 .DS_Store
