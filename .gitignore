@@ -8,3 +8,4 @@ sites/*/private
 db/*.sql*
 
 .DS_Store
+.vagrant
