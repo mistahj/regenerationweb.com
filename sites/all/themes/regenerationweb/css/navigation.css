@@ -4,47 +4,6 @@
  */
 
 
-/*
- * The active item in a Drupal menu
- */
-li a.active {
-  color: #000;
-}
-
-/*
- * Navigation bar
- */
-#navigation {
-  /* overflow: hidden; /* Sometimes you want to prevent overlapping with main div. */
-}
-
-#navigation ul.links, /* Main menu and secondary menu links */
-#navigation .content ul /* Menu block links */ {
-  margin: 0;
-  padding: 0;
-  text-align: left; /* LTR */
-}
-
-#navigation ul.links li, /* A simple method to get navigation links to appear in one line. */
-#navigation .content li {
-  float: left; /* LTR */
-  padding: 0 10px 0 0; /* LTR */
-}
-
-.region-navigation {
-}
-
-/*
- * Styling main menus.
- * For superfish dropdown style, see superfish.css
- */
-
-/**
- * Secondary menu
- */
-#secondary-menu {
-  float: right;
-}
 
 /*
  * Menu blocks

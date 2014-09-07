@@ -12,6 +12,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.2.0"
+    "bootstrap": "~3.2.0",
+    "foundation": "~5.4.3"
   }
 }
