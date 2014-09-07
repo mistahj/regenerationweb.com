@@ -5,6 +5,7 @@ sites/*/settings*.php
 sites/*/files
 sites/*/private
 
-db/*.sql.gz
+db/*.sql*
 
 .DS_Store
+.vagrant
