@@ -58,7 +58,6 @@
  *   and http://drupal.org/node/190815#template-suggestions
  */
 
-
 /**
  * Override or insert variables into the html templates.
  *
@@ -68,7 +67,6 @@
  *   The name of the template being rendered ("html" in this case.)
  */
 function regenerationweb_preprocess_html(&$variables, $hook) {
-  
   drupal_add_css('http://fonts.googleapis.com/css?family=Spinnaker|Cantarell:700', array('type' => 'external'));
   //$variables['sample_variable'] = t('Lorem ipsum.');
 
@@ -141,12 +139,17 @@ function regenerationweb_preprocess_block(&$variables, $hook) {
 }
 // */
 
-
-
 /**
  * Remove system-wide CSS files.
  */
 function regenerationweb_css_alter(&$css) {
   // Remove menu css file.
   unset($css[drupal_get_path('module', 'system') . '/system.menus.css']);
+}
+
+/**
+ * Remove some default menu style themes
+ */
+function regenerationweb_menu_tree__main_menu($variables) {
+  return '<ul class="menu">' . $variables['tree'] . '</ul>';
 }

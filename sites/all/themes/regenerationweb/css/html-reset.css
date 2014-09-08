@@ -158,14 +158,16 @@ h1 {
      pages' base font size. So, for example, if we want a 1.5em margin (relative
      to the base font), we have to divide that length by the element's
      font-size:  1.5em / 2em = 0.5em  */
-  font-size: 2em;
   line-height: 1em;
   margin: 0.75em 0;
+  font-weight: bold;
+  font-size: inherit;
   /*text-transform: uppercase;*/
 }
 
 h2, h3 {
-    font-family: adelle, 'Futura', 'Helvetica', 'Arial', 'Ubuntu Sans' sans-serif;
+  font-weight: bold;
+  font-family: adelle, 'Futura', 'Helvetica', 'Arial', 'Ubuntu Sans' sans-serif;
 }
 
 h2 {

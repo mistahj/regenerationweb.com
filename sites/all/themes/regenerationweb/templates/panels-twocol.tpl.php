@@ -15,11 +15,11 @@
  */
 ?>
 <div class="row" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
-  <div class="columns small-8">
+  <div class="columns medium-8">
     <div class="inside"><?php print $content['left']; ?></div>
   </div>
 
-  <div class="columns small-4">
+  <div class="columns medium-4">
     <div class="inside"><?php print $content['right']; ?></div>
   </div>
 </div>

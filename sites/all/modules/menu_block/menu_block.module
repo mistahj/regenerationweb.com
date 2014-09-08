@@ -421,6 +421,7 @@ function menu_tree_build(&$config) {
   $data['subject_array'] = $title;
   $data['subject'] = drupal_render($title);
   $data['content']['#content'] = menu_block_tree_output($tree, $config);
+
   if (!empty($data['content']['#content'])) {
     $data['content']['#theme'] = array(
       'menu_block_wrapper__' . str_replace('-', '_', $config['delta']),
@@ -457,10 +458,10 @@ function menu_block_get_title($render_title_as_link = TRUE) {
   elseif ($render_title_as_link) {
     if (!empty($menu_item['in_active_trail'])) {
       if (!empty($menu_item['localized_options']['attributes']['class'])) {
-        $menu_item['localized_options']['attributes']['class'][] = 'active-trail';
+        $menu_item['localized_options']['attributes']['class'][] = 'active';
       }
       else {
-        $menu_item['localized_options']['attributes']['class'][] = 'active-trail';
+        $menu_item['localized_options']['attributes']['class'][] = 'active';
       }
     }
     $title = array(
@@ -727,21 +728,22 @@ function menu_block_tree_output(&$tree, $config = array()) {
     // the current menu.
     if ($data['link']['has_children'] && $data['below']) {
       $class[] = 'expanded';
+      $class[] = 'has-dropdown';
     }
     elseif ($data['link']['has_children']) {
       $class[] = 'collapsed';
+      $class[] = 'has-dropdown';
     }
     else {
       $class[] = 'leaf';
     }
     if (!empty($data['link']['leaf_has_children'])) {
       $class[] = 'has-children';
-      $class[] = 'has-dropdown';
     }
     // Set a class if the link is in the active trail.
     if ($data['link']['in_active_trail']) {
-      $class[] = 'active-trail';
-      $data['link']['localized_options']['attributes']['class'][] = 'active-trail';
+      $class[] = 'active';
+      $data['link']['localized_options']['attributes']['class'][] = 'active';
     }
     if ($data['link']['href'] == $_GET['q'] || ($data['link']['href'] == '<front>' && drupal_is_front_page())) {
       $class[] = 'active';

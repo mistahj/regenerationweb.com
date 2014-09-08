@@ -41,6 +41,11 @@ var THEME_COLORS = ['#E0401C', '#E5B051', '#F7EDB7', '#9E2B20', '#40350A'];
     //  bgColor: "transparent"
     //});
 
+    // Slightly hacky; since I can't get the Drupal theme to correctly produce the
+    // right markup for Foundation's top-bar widget, I'm just going to use JS to
+    // manipulate it.
+    $('.top-bar ul * ul.menu').addClass('dropdown');
+
     $(document).foundation()
   })
 })(jQuery);
