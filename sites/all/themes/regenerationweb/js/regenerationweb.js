@@ -46,6 +46,9 @@ var THEME_COLORS = ['#E0401C', '#E5B051', '#F7EDB7', '#9E2B20', '#40350A'];
     // manipulate it.
     $('.top-bar ul * ul.menu').addClass('dropdown');
 
+    // Ditto for input search buttons that don't conform to foundation.
+    $('input[type=submit]').addClass('button');
+
     $(document).foundation()
   })
 })(jQuery);
