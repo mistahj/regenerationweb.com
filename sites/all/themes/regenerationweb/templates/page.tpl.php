@@ -72,17 +72,20 @@
 ?>
 <div class="edge-colors clearfix"></div>
 <div id="page-wrapper">
-  <div id="page" class="container_24">
+  <div id="page">
 
-  <div id="header">
-    <div class="section clearfix">
+  <div id="header" class="row">
+    <div class="section">
+
+    <?php print render($page['header']); ?>
 
     <?php if ($logo): ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
     <?php endif; ?>
 
     <?php if ($site_name || $site_slogan): ?>
-      <div id="name-and-slogan">
+      <div id="name-and-slogan" class="row">
+        <div class="columns small-12 centered">
         <?php if ($site_name): ?>
         <h1 id="site-name">
           <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
@@ -92,18 +95,20 @@
         <?php if ($site_slogan): ?>
           <div id="site-slogan"><?php print $site_slogan; ?></div>
         <?php endif; ?>
+      </div>
       </div><!-- /#name-and-slogan -->
+   
     <?php endif; ?>
 
-    <?php print render($page['header']); ?>
 
   </div></div><!-- /.section, /#header -->
 
-  <div id="main-wrapper" class="grid_24"><div id="main" class="clearfix<?php if ($main_menu || $page['navigation']) { print ' with-navigation'; } ?>">
+  <div id="main-wrapper" class="row">
+    <div id="main" class="<?php if ($main_menu || $page['navigation']) { print ' with-navigation'; } ?>">
 
     <? $has_sidebar = !empty($page['sidebar_first']); ?>
 
-    <div id="content" class="column<?= $has_sidebar ? " grid_16 alpha" : "" ?>">
+    <div id="content" class="columns <?= $has_sidebar ? "medium-8" : "medium-12" ?>">
       <div class="section">
         <?php print render($page['highlighted']); ?>
         <?php print $breadcrumb; ?>
@@ -124,21 +129,24 @@
         <?php print render($page['content']); ?>
         <?php print $feed_icons; ?>
       </div>
-      <div class="section grid_8 alpha"><?php print render($page['content_left_col']); ?></div>
-      <div class="section grid_8 omega"><?php print render($page['content_right_col']); ?></div>
+      <div class="columns medium-6"><?php print render($page['content_left_col']); ?></div>
+      <div class="columns medium-6"><?php print render($page['content_right_col']); ?></div>
     </div><!-- /.section, /#content -->
     
     <? if ($has_sidebar): ?>
-    <div class="section grid_7 prefix_1 omega">
+    <div class="columns medium-4">
       <?php print render($page['sidebar_first']); ?>
     </div>
     <? endif; ?>
     
 
     <?php if ($page['navigation'] || $main_menu): ?>
-      <div id="navigation" class="grid_24"><div class="section clearfix">
-        <?php print render($page['navigation']); ?>
-      </div></div><!-- /.section, /#navigation -->
+      <div class="menu-wrapper row">
+        <div class="columns medium-12 clearfix">
+          <?php print render($page['navigation']); ?>
+        </div>
+      </div>
+      <!-- /.section, /#navigation -->
     <?php endif; ?>
 
     <?php print render($page['sidebar_second']); ?>
@@ -147,20 +155,20 @@
 
 </div></div><!-- /#page, /#page-wrapper -->
 
-<div id="footer_wrapper" class="clearfix">
+<div id="footer_wrapper">
   <div class="edge-colors clearfix"></div>
-  <div id="footer" class="container_24">
-    <div class="grid_8 alpha">
+  <footer id="footer" class="row">
+    <div class="medium-4 columns">
       
       <?php print render($page['footer_l']); ?>
     </div>
-    <div class="grid_8">
+    <div class="medium-4 columns">
       <?php print render($page['footer_m']); ?>
     </div>
-    <div class="grid_8 omega">
+    <div class="medium-4 columns">
       <?php print render($page['footer_r']); ?>
     </div>
-  </div>
+  </footer>
 </div>
 
 <?php print render($page['bottom']); ?>

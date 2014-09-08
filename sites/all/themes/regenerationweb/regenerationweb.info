@@ -31,6 +31,9 @@ base theme  = zen
 ; useful feature. See the excellent Drupal 7 Theme Guide at
 ; http://drupal.org/node/263967 for more details.
 
+stylesheets[all][] = bower_components/foundation/css/normalize.css
+stylesheets[all][] = bower_components/foundation/css/foundation.css
+
 stylesheets[all][]        = css/html-reset.css
 ;stylesheets[all][]        = css/wireframes.css
 ;stylesheets[all][]        = css/layout-fixed.css
@@ -38,18 +41,18 @@ stylesheets[all][]        = css/page-backgrounds.css
 stylesheets[all][]        = css/tabs.css
 stylesheets[all][]        = css/pages.css
 stylesheets[all][]        = css/blocks.css
-stylesheets[all][]        = css/navigation.css
+;stylesheets[all][]        = css/navigation.css
 stylesheets[all][]        = css/views-styles.css
-stylesheets[all][]        = css/nodes.css
+;stylesheets[all][]        = css/nodes.css
 ;stylesheets[all][]        = css/comments.css
-stylesheets[all][]        = css/forms.css
-stylesheets[all][]        = css/fields.css
-stylesheets[all][]        = css/twocol.css
-stylesheets[all][]         = css/superfish.css
-stylesheets[all][]         = css/external/960/960_24_col.css
+;stylesheets[all][]        = css/forms.css
+;stylesheets[all][]        = css/fields.css
+;stylesheets[all][]        = css/twocol.css
+;stylesheets[all][]         = css/superfish.css
+;stylesheets[all][]         = css/external/960/960_24_col.css
 stylesheets[all][]         = css/external/flexslider/flexslider.css
-
 ;stylesheets[print][]      = css/print.css
+
 
 ; Example of adding handheld stylesheets. The iPhone's preferred media type
 ; is based on the CSS3 Media queries. http://www.w3.org/TR/css3-mediaqueries/
@@ -60,21 +63,24 @@ stylesheets[all][]         = css/external/flexslider/flexslider.css
 ; Add conditional stylesheets that are processed by IE. See the css/README.txt.
 
 ; To target all versions of IE with an ie.css, uncomment the following line:
-stylesheets-conditional[IE][all][]       = css/ie.css
-stylesheets-conditional[lte IE 7][all][]  = css/ie7.css
-stylesheets-conditional[lte IE 6][all][]  = css/ie6.css
+;stylesheets-conditional[IE][all][]       = css/ie.css
+;stylesheets-conditional[lte IE 7][all][]  = css/ie7.css
+;stylesheets-conditional[lte IE 6][all][]  = css/ie6.css
 
 
 
 ; Optionally add some JavaScripts to your theme.
 
 ;scripts[] = js/jquery.1.6.1.min.js
+scripts[] = bower_components/jquery/dist/jquery.js
+scripts[] = bower_components/fastclick/lib/fastclick.js
 scripts[] = js/underscore-min.js
 scripts[] = js/jquery.migrate.js
 scripts[] = js/hoverIntent.js
-scripts[] = js/superfish.js
 scripts[] = js/external/flexslider/jquery.flexslider-min.js
-scripts[] = js/external/media/jquery.media.js
+;scripts[] = js/external/media/jquery.media.js
+scripts[] = bower_components/modernizr/modernizr.js
+scripts[] = bower_components/foundation/js/foundation.js
 scripts[] = js/regenerationweb.js
 
 

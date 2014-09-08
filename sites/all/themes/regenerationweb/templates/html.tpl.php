@@ -73,14 +73,6 @@
   <script type="text/javascript" src="http://use.typekit.com/vgc7fhg.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-  <script language="javascript">
-    jQuery(document).ready(function() {
-        var rootEl = jQuery('#header #main-menu-nav > ul');
-        rootEl.addClass('sf-menu');
-        rootEl.superfish();
-    });
-  </script>
-
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <div id="skip-link">

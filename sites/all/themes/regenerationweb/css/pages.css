@@ -79,15 +79,27 @@ body {
   margin: 1.5em 0;
 }
 
-h1#site-name,
-div#site-name /* The name of the website */ {
+h1#site-name {
   margin: 0;
-  font-size: 5em;
   text-align: center;
   line-height: 1.5em;
   text-shadow: 1px 1px 2px #FFF;
   font-family: Spinnaker, Futura, Helvetica Neue, sans-serif;
   text-transform: uppercase;
+}
+
+@media only screen {
+  font-size: 2em;
+}
+@media only screen and (min-width: 40.063em) {
+  h1#site-name {
+    font-size: 3em;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  h1#site-name {
+    font-size: 5em;
+  }
 }
 
 #site-name a:link,
@@ -199,19 +211,7 @@ div.tabs /* See also the tabs.css file. */ {
 .field-name-field-image-graphic {
   height: 200px;
   overflow: hidden;
-  background-color: #FFF;
-  box-shadow: 0 0 8px rgba(0,0,0,0.4);
   position: relative;
-  border: 5px solid #FFF;
-  -webkit-transition: all .75s ease-in-out;
-  -moz-transition: all .75s ease-in-out;
-  -o-transition: all .75s ease-in-out;
-  -ms-transition: all .75s ease-in-out;
-  transition: all .75s ease-in-out;
-}
-
-.field-name-field-image-graphic:hover {
-  height: 300px;
 }
 
 .field-name-field-image-graphic img {

@@ -34,7 +34,6 @@
 
 #block-views-regenannouncementcarousel-block ul.slides li {
   text-align: center;
-  width: 630px !important;
   height: 472px;
   display: none;
   position: relative;
@@ -47,11 +46,6 @@
 /*  position: absolute;*/
   opacity: 0;
   padding: 10%;
-  width: 80%;
-/*  width: auto;
-  float: left;
-  left: 10%;
-  bottom: 10%; */
   background-color: rgba(0, 0, 0, 0.4);
   font-size: 1.5em;
 }
