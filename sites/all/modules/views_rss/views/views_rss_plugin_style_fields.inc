@@ -18,10 +18,7 @@ class views_rss_plugin_style_fields extends views_plugin_style {
       $url_options['query'] = $input;
     }
 
-    // Don't add arguments to RSS path if the feed does not support arguments.
-    $feed_path = !empty($this->display->display_options['arguments']) ? $this->view->get_url(NULL, $path) : $path;
-
-    $url = url($feed_path, $url_options);
+    $url = url($this->view->get_url(NULL, $path), $url_options);
     if ($display->has_path() && !$this->options['feed_settings']['feed_in_links']) {
       if (empty($this->preview)) {
         drupal_add_feed($url, $title);
@@ -350,7 +347,7 @@ class views_rss_plugin_style_fields extends views_plugin_style {
     }
     return $errors;
   }
-
+  
   /**
    * Map views row result to an RSS item.
    */

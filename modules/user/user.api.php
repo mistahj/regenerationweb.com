@@ -327,6 +327,14 @@ function hook_user_logout($account) {
  * The module should format its custom additions for display and add them to the
  * $account->content array.
  *
+ * Note that when this hook is invoked, the changes have not yet been written to
+ * the database, because a database transaction is still in progress. The
+ * transaction is not finalized until the save operation is entirely completed
+ * and user_save() goes out of scope. You should not rely on data in the
+ * database at this time as it is not updated yet. You should also note that any
+ * write/update database queries executed from this hook are also not committed
+ * immediately. Check user_save() and db_transaction() for more info.
+ *
  * @param $account
  *   The user object on which the operation is being performed.
  * @param $view_mode
@@ -378,7 +386,7 @@ function hook_user_view_alter(&$build) {
 }
 
 /**
- * Act on a user role being inserted or updated.
+ * Inform other modules that a user role is about to be saved.
  *
  * Modules implementing this hook can act on the user role object before
  * it has been saved to the database.
@@ -397,7 +405,7 @@ function hook_user_role_presave($role) {
 }
 
 /**
- * Respond to creation of a new user role.
+ * Inform other modules that a user role has been added.
  *
  * Modules implementing this hook can act on the user role object when saved to
  * the database. It's recommended that you implement this hook if your module
@@ -418,7 +426,7 @@ function hook_user_role_insert($role) {
 }
 
 /**
- * Respond to updates to a user role.
+ * Inform other modules that a user role has been updated.
  *
  * Modules implementing this hook can act on the user role object when updated.
  * It's recommended that you implement this hook if your module adds additional
@@ -439,7 +447,7 @@ function hook_user_role_update($role) {
 }
 
 /**
- * Respond to user role deletion.
+ * Inform other modules that a user role has been deleted.
  *
  * This hook allows you act when a user role has been deleted.
  * If your module stores references to roles, it's recommended that you
