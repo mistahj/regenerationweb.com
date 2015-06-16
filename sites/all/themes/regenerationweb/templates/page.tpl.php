@@ -106,7 +106,7 @@
   <div id="main-wrapper" class="row">
     <div id="main" class="<?php if ($main_menu || $page['navigation']) { print ' with-navigation'; } ?>">
 
-    <? $has_sidebar = !empty($page['sidebar_first']); ?>
+    <?php $has_sidebar = !empty($page['sidebar_first']); ?>
 
     <div id="content" class="columns <?= $has_sidebar ? "medium-8" : "medium-12" ?>">
       <div class="section">
